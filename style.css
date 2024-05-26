@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-squares .square {
+    background: #EEE;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 1px solid #2196f3;
+    padding: 19px;
+    margin: 5px 5px;
+    height: 20px;
+}
+
+.game-squares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid black;
+    border-top-color: transparent;
+    margin:0 auto
+}
+
+.result {
+    margin-left: 70px;
+    font-size: 12px;
+}
+
+.game-info {
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border: 1px solid #03a9f4;
+    border-bottom: none;
+    border-right-color: #ff5722;
+    border-top-color: #009688;
+    align-items: center;
+}
+
+.game-info::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to right, #03a9f4 20%, #00bcd4 20%, #00bcd4 40%, #009688 40%, #009688 60%, #673ab7 60%, #673ab7 80%, #ff5722 90%, #ff5722 10%);
+    height: 2px;
+    bottom: 0;
+}
+
+.user-turn {
+    margin-right: 5px;
+}
+
+.square:hover{
+    background-color: rgb(220, 215, 215);
+}
+.square{
+    cursor: pointer;
+}
+
+.game-squares .square.clicked{
+    pointer-events: none;
+    opacity: 0.5;
+}
